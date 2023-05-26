@@ -3,7 +3,7 @@
     <img
       src="https://cdn-icons-png.flaticon.com/512/266/266033.png"
       alt="User"
-      class="mt-6 w-20 h-20 rounded-full"
+      class="mr-6 w-20 h-20 rounded-full"
     />
 
     <div class="flex flex-col w-full">
