@@ -20,8 +20,8 @@ export enum Mutations {
   SET_HAS_COMPLETED = 'SET_HAS_COMPLETED'
 }
 
-export type RootSatate = ReturnType<() => State>
-export interface MutationsInterface extends MutationTree<RootSatate> {
+export type RootState = ReturnType<() => State>
+export interface MutationsInterface extends MutationTree<RootState> {
   [Mutations.SET_TIME](s: State, p: number): void;
   [Mutations.RESET_TIME](s: State): void;
   [Mutations.SET_IS_ACTIVE](s: State, p: boolean): void;
