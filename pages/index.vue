@@ -6,7 +6,7 @@
       <Profile />
       <CompletedChallenges @completed="getNewChallenge" />
 
-      <button v-if="hasCountdonwCompleted" disabled class="button completed">
+      <button v-if="hasCountdownCompleted" disabled class="button completed">
         Cycle completed
       </button>
 
@@ -37,6 +37,8 @@ import Countdown from "~/components/molecules/Countdown.vue";
 import CompletedChallenges from "~/components/atoms/CompletedChallenges.vue";
 import Profile from "~/components/molecules/Profile.vue";
 
+import { playAudio, sendNotification } from "~/utils";
+
 interface Head {
   title: string;
 }
@@ -63,7 +65,7 @@ export default Vue.extend({
   computed: {
     ...mapState("Countdown", {
       hasCountdownCompleted: "hasCompleted",
-      iCountdownActive: "isActive",
+      isCountdownActive: "isActive",
     }),
   },
 
