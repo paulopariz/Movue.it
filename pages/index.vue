@@ -4,7 +4,8 @@
   >
     <div class="flex flex-col w-full lg:w-1/2">
       <Profile />
-      <CompletedChallenges @completed="getNewChallenge" />
+      <CompletedChallenges />
+      <Countdown @completed="getNewChallenge" />
 
       <button v-if="hasCountdownCompleted" disabled class="button completed">
         Cycle completed
@@ -21,7 +22,6 @@
       <button v-else class="button start" @click="setCountdownState(true)">
         Start a cycle
       </button>
-      <Countdown />
     </div>
   </section>
 </template>
