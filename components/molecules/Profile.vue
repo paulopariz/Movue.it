@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center">
     <img
-      src="https://cdn-icons-png.flaticon.com/512/266/266033.png"
+      src="https://p7.hiclipart.com/preview/247/564/869/computer-icons-user-profile-clip-art-user-avatar.jpg"
       alt="User"
       class="mr-6 w-20 h-20 rounded-full"
     />

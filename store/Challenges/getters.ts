@@ -1,4 +1,4 @@
-import { Getters } from "./types";
+import { Getters } from './types';
 
 export default {
   challengesLength: state => state.allChallenges.length,
@@ -6,5 +6,8 @@ export default {
     const percentage = (state.xp.current / state.xp.end) * 100;
     return Number(percentage.toFixed(2));
   },
-  currentChallenge: state => (typeof state.currentChallengesIndex === "number") ? state.allChallenges[state.currentChallengesIndex] : null
+  currentChallenge: state =>
+    (typeof state.currentChallengesIndex === 'number')
+      ? state.allChallenges[state.currentChallengesIndex]
+      : null,
 } as Getters;
