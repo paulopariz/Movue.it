@@ -72,9 +72,7 @@ export default Vue.extend({
       isCountdownActive: "isActive",
     }),
 
-    ...mapGetters("Challenge", {
-      challengesLength: "challengesLength",
-    }),
+    ...mapGetters("Challenge", ["challengesLength"]),
   },
 
   methods: {
@@ -90,10 +88,7 @@ export default Vue.extend({
     },
 
     getNewChallenge() {
-      const index = getRandomNumber(0, this.challengesLength);
-
       this.setCountdownHasCompleted(true);
-      this.setCurrentChallengeIndex(index);
 
       if (Notification?.permission === "granted") {
         playAudio("/notification.mp3");
